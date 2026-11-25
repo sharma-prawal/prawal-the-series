@@ -17,7 +17,9 @@ const profileLinks = [
 ];
 
 const summary =
-  'Engineering Manager and hands-on architecture leader with 10 years of experience delivering enterprise payments and advertising-data platforms for global clients across the US, UK and South Africa. Currently leads two concurrent client engagements of roughly 5–12 people each — directly managing about half of the combined team (performance, mentoring, career growth, hiring decisions) and providing technical leadership to partner-vendor engineers. Owns solution design, engineering execution, production quality, releases and stakeholder alignment, with a record of 100% client satisfaction, zero escalations and multi-year client retention. Experienced in cloud-native and event-driven architecture, and in applying AI to engineering — AI-assisted delivery, RAG, LLM and MCP prototypes. Claude Certified Architect; AWS, Azure and GCP certified; valid B1/B2 visa.';
+  'Engineering Manager and hands-on technology leader with 10 years of experience delivering scalable enterprise solutions across fintech, payments, and media technology for global clients. Currently leading two concurrent engineering engagements with teams of 5–12 professionals each, combining direct people management—including performance reviews, mentoring, career development, and hiring decisions—with cross-vendor technical leadership. Experienced in solution architecture, cloud-native and event-driven systems, engineering delivery, production reliability, and global stakeholder management. Driving AI adoption through AI-assisted engineering, intelligent automation, and LLM/MCP initiatives. AWS, Azure, GCP, and Claude Certified Architect certified, with a proven track record of successful delivery and long-term client relationships.';
+/** Shown in bold after the summary. */
+const summaryEmphasis = 'Holds a valid U.S. B1/B2 visa with prior U.S. onsite client experience.';
 
 const highlights = [
   { value: '10 yrs', label: 'engineering & team leadership' },
@@ -86,7 +88,7 @@ const successive: Role[] = [
 
 const selectedProjects = [
   {
-    name: 'Payments — BIM Enrollment & Transactions',
+    name: 'ACH Payments Platform',
     meta: 'Fintech · Team Lead → Engineering Manager · 2017 – Present',
     text: 'White-label ACH enrollment and payment operations — merchant mapping, returns and settlements, fraud detection and scoring, compliance reporting, Plaid and Socure identity flows; event-driven jobs modernized on Azure.',
   },
@@ -96,7 +98,7 @@ const selectedProjects = [
     text: "Governed data ingestion and activation for Dentsu International: 90+ data sources with 1–2 day onboarding and delivery to AWS, Google Cloud, Azure and Snowflake.",
   },
   {
-    name: 'AI-Driven Datasource Intelligence & MCP',
+    name: 'AI-Driven Datastream Intelligence & MCP',
     meta: '2026 proofs of concept · with Amit Bora',
     text: 'Schedule- and configuration-risk recommendations learned from historical pipeline behavior (XGBoost, explainable ML), plus read-only API exposure through an MCP server — experimental, not production.',
   },
@@ -229,7 +231,9 @@ export default function FullResume() {
       </header>
 
       <Section title="Professional Summary">
-        <p className="summary">{summary}</p>
+        <p className="summary">
+          {summary} <b>{summaryEmphasis}</b>
+        </p>
         <div className="stats">
           {highlights.map((h) => (
             <div key={h.label} className="stat">
