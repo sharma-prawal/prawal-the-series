@@ -11,6 +11,7 @@ import { achievements, education, profile } from '../data/portfolio';
 
 /** Public profiles shown under the contact line. */
 const profileLinks = [
+  { href: 'https://prawalsharma.in' },
   { href: 'https://github.com/sharma-prawal' },
   { href: 'https://www.credly.com/users/sharma-prawal' },
   { href: 'https://www.hackerrank.com/profile/PrawalSharma' },
